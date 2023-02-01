@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<view class="text-area">
-			<text class="title">{{title}}111111</text>
+			<text class="title">{{title}}</text>
 		</view>
 	</view>
 </template>

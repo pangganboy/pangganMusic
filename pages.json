@@ -3,13 +3,63 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/myCenter/index",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/musicPlay/index",
+			"style": {
+				"navigationBarTitleText": "播放页"
+			}
+		},
+		{
+			"path": "pages/musicList/index",
+			"style": {
+				"navigationBarTitleText": "音乐列表"
+			}
+		},
+		{
+			"path": "pages/musicSearch/musicSearch",
+			"style": {
+				"navigationBarTitleText": "搜索"
 			}
 		}
 	],
+	"tabBar": {
+		"color": "#282828",
+		"selectedColor": "#8ac28e",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"position": "bottom",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"selectedIconPath": "static/icon/1-001.png",
+				"iconPath": "static/icon/1-002.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/musicList/index",
+				"selectedIconPath": "static/icon/2-001.png",
+				"iconPath": "static/icon/2-002.png",
+				"text": "收藏列表"
+			},
+			{
+				"pagePath": "pages/myCenter/index",
+				"selectedIconPath": "static/icon/3-001.png",
+				"iconPath": "static/icon/3-002.png",
+				"text": "个人中心"
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "PGmusic",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
