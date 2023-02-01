@@ -30,38 +30,31 @@
 				"navigationBarTitleText": "搜索"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/menuList/menuList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "菜单栏",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"tabBar": {
 		"color": "#282828",
 		"selectedColor": "#8ac28e",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"position": "bottom",
-		"list": [{
-				"pagePath": "pages/index/index",
-				"selectedIconPath": "static/icon/1-001.png",
-				"iconPath": "static/icon/1-002.png",
-				"text": "首页"
-			},
-			{
-				"pagePath": "pages/musicList/index",
-				"selectedIconPath": "static/icon/2-001.png",
-				"iconPath": "static/icon/2-002.png",
-				"text": "收藏列表"
-			},
-			{
-				"pagePath": "pages/myCenter/index",
-				"selectedIconPath": "static/icon/3-001.png",
-				"iconPath": "static/icon/3-002.png",
-				"text": "个人中心"
-			}
+		"list": [
 		]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "PGmusic",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"titleNView": false
 	},
 	"uniIdRouter": {}
 }

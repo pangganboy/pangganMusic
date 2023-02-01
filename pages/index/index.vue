@@ -1,16 +1,19 @@
 <template>
 	<view class="content">
+		<menuTab></menuTab>
 		<view class="text-area">
-			<text class="title">{{title}}111111</text>
 		</view>
 	</view>
 </template>
 
 <script>
+	import menuTab from '@/components/menuTab/index.vue'
 	export default {
+		components:{
+			menuTab
+		},
 		data() {
 			return {
-				title: 'Hello'
 			}
 		},
 		onLoad() {
