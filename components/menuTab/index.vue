@@ -5,7 +5,7 @@
 		</div>
 		<div v-else>
 			<div class="leftMenu">
-				<div class="menuItem" :class='active==index?"on":""' v-for="(item,index) in menuList" :key="index">
+				<div @click="goPage(item)" class="menuItem" :class='active==index?"on":""' v-for="(item,index) in menuList" :key="index">
 					{{item.name}}
 				</div>
 			</div>
@@ -23,15 +23,19 @@
 				deviceInfo: [],
 				menuList: [{
 						"name": "首页",
+						"componentName":"musicSearch"
 					},
 					{
-						"name": "热门歌曲"
+						"name": "热门歌曲",
+						"componentName":"hotMusic"
 					},
 					{
-						"name": "收藏列表"
+						"name": "收藏列表",
+						"componentName":"musicList"
 					},
 					{
-						"name": "设置"
+						"name": "设置",
+						"componentName":"systemSet"
 					}
 				]
 			};
@@ -41,7 +45,7 @@
 		},
 		methods: {
 			goPage(e) {
-				console.log(e)
+				this.$emit("pagesChange",e)
 			}
 		}
 	}

@@ -1,54 +1,53 @@
 <template>
 	<view class="content">
-		<menuTab></menuTab>
-		<view class="text-area">
+		<view class="left">
+			<menuTab @pagesChange="changeComponent"></menuTab>
+		</view>
+		<view class="right">
+			<component :is="componentName">
+			</component>
 		</view>
 	</view>
 </template>
 
 <script>
 	import menuTab from '@/components/menuTab/index.vue'
+	import musicList from '@/components/musicList/index.vue'
+	import systemSet from '@/components/systemSet/index.vue'
+	import hotMusic from '@/components/hotMusic/index.vue'
 	export default {
-		components:{
-			menuTab
+		components: {
+			menuTab,
+			musicList,
+			systemSet,
+			hotMusic
 		},
 		data() {
 			return {
+				componentName: 'musicList',
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			changeComponent(e) {
+				this.componentName = e.componentName;
+			}
 		}
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.content {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 	}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+	.content .left {
+		width: 160rpx;
 	}
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+	.content .right {
+		flex: 1;
 	}
 </style>
