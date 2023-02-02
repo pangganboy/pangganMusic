@@ -22,20 +22,20 @@
 				active:0,
 				deviceInfo: [],
 				menuList: [{
-						"name": "首页",
-						"componentName":"musicSearch"
+						"name": "搜索",
+						"componentName":'searchMusic'
 					},
 					{
 						"name": "热门歌曲",
-						"componentName":"hotMusic"
+						"componentName":'hotMusic'
 					},
 					{
 						"name": "收藏列表",
-						"componentName":"musicList"
+						"componentName":'musicList'
 					},
 					{
 						"name": "设置",
-						"componentName":"systemSet"
+						"componentName":'systemSet'
 					}
 				]
 			};
@@ -53,8 +53,9 @@
 
 <style lang="scss">
 	.leftMenu {
-		width: 160rpx;
+		width: 100rpx;
 		height: 100vh;
+		border-right: 2rpx solid green;
 		position: fixed;
 		left: 0;
 		display: flex;
