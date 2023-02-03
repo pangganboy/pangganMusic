@@ -5,8 +5,12 @@
 		</div>
 		<div v-else>
 			<div class="leftMenu">
-				<div @click="goPage(item)" class="menuItem" :class='active==index?"on":""' v-for="(item,index) in menuList" :key="index">
-					{{item.name}}
+				<div class="menuItem" @click="goPage(item)" :class='active==index?"on":""' v-for="(item,index) in menuList" :key="index">
+					<view class="item">
+						<view>
+							<span class="iconfont" :class="item.icon"></span>
+						</view>
+					</view>
 				</div>
 			</div>
 			<!-- <u-tabs :list="menuList" @click="goPage"></u-tabs> -->
@@ -23,19 +27,23 @@
 				deviceInfo: [],
 				menuList: [{
 						"name": "搜索",
-						"componentName":'searchMusic'
+						"componentName":'searchMusic',
+						"icon":"icon-sousuoleimu"
 					},
 					{
-						"name": "热门歌曲",
-						"componentName":'hotMusic'
+						"name": "热门歌单",
+						"componentName":'hotMusic',
+						"icon":"icon-remen1"
 					},
 					{
 						"name": "收藏列表",
-						"componentName":'musicList'
+						"componentName":'musicList',
+						"icon":"icon-jushoucanggift"
 					},
 					{
 						"name": "设置",
-						"componentName":'systemSet'
+						"componentName":'systemSet',
+						"icon":"icon-shezhi3"
 					}
 				]
 			};
@@ -53,7 +61,7 @@
 
 <style lang="scss">
 	.leftMenu {
-		width: 100rpx;
+		width: 80rpx;
 		height: 100vh;
 		border-right: 2rpx solid green;
 		position: fixed;
@@ -61,10 +69,14 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 	}
 
 	.leftMenu .menuItem {
 		padding: 30rpx 0;
 		&.on{}
+	}
+	.leftMenu .menuItem .item .iconfont{
+		font-size: 48rpx;
 	}
 </style>

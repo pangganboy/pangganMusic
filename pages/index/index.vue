@@ -14,7 +14,7 @@
 		</view>
 		<!-- 顶部和左侧菜单栏 -->
 		<view class="leftMenu">
-			<menuTab />
+			<menuTab  @pagesChange="changeComponent"/>
 		</view>
 	</view>
 </template>
@@ -64,6 +64,6 @@
 
 	.content .leftMenu {
 		order: 1;
-		width: 100rpx;
+		width: 80rpx;
 	}
 </style>
