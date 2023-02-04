@@ -106,13 +106,11 @@
 	@import "../../libs/css/components.scss";
 
 	.u-line-progress {
-		align-items: stretch;
+		align-items: center;
 		position: relative;
 		@include flex(row);
 		flex: 1;
-		overflow: hidden;
 		border-radius: 100px;
-
 		&__background {
 			background-color: #ececec;
 			border-radius: 100px;

@@ -1,16 +1,9 @@
-/* @font-face {
-  font-family: "iconfont"; 
-  Project id 3875866
-  src: url('iconfont.woff2?t=1675387767802') format('woff2'),
-       url('iconfont.woff?t=1675387767802') format('woff'),
-       url('iconfont.ttf?t=1675387767802') format('truetype');
-} */
 /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
   font-family: 'iconfont';  /* Project id 3875866 */
-  src: url('//at.alicdn.com/t/c/font_3875866_yo2egtekhvi.woff2?t=1675387756019') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3875866_yo2egtekhvi.woff?t=1675387756019') format('woff'),
-       url('//at.alicdn.com/t/c/font_3875866_yo2egtekhvi.ttf?t=1675387756019') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3875866_9s61w4cmmt5.woff2?t=1675434022119') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3875866_9s61w4cmmt5.woff?t=1675434022119') format('woff'),
+       url('//at.alicdn.com/t/c/font_3875866_9s61w4cmmt5.ttf?t=1675434022119') format('truetype');
 }
 
 .iconfont {
@@ -19,6 +12,38 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shangyishou:before {
+  content: "\e610";
+}
+
+.icon-xiayishou:before {
+  content: "\e616";
+}
+
+.icon-xiayishou1:before {
+  content: "\e62f";
+}
+
+.icon-xiayishou2:before {
+  content: "\e649";
+}
+
+.icon-shangyishou1:before {
+  content: "\e63d";
+}
+
+.icon-xiayishou_huaban:before {
+  content: "\e636";
+}
+
+.icon-shangyiqu:before {
+  content: "\e63e";
+}
+
+.icon-xiayiqu:before {
+  content: "\e63f";
 }
 
 .icon-shibai:before {

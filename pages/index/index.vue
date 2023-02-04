@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="content" :style="theme.colorList">
 		<!-- 右侧展示内容区域和播放器控件 -->
 		<view class="main">
 			<!-- 主要内容展示 -->
@@ -9,23 +9,27 @@
 			</view>
 			<!-- 底部播放器控件 -->
 			<view>
-				<musicPlayer />
+				<musicPlayer  />
 			</view>
 		</view>
 		<!-- 顶部和左侧菜单栏 -->
 		<view class="leftMenu">
-			<menuTab  @pagesChange="changeComponent"/>
+			<menuTab   @pagesChange="changeComponent"/>
 		</view>
 	</view>
 </template>
 
 <script>
+	import {
+		mapGetters
+	} from "vuex"
 	import searchMusic from '@/components/searchMusic/index.vue'
 	import menuTab from '@/components/menuTab/index.vue'
 	import musicList from '@/components/musicList/index.vue'
 	import systemSet from '@/components/systemSet/index.vue'
 	import hotMusic from '@/components/hotMusic/index.vue'
 	import musicPlayer from '@/components/musicPlayer/index.vue'
+	let app = getApp();
 	export default {
 		components: {
 			menuTab,
@@ -40,12 +44,18 @@
 				componentName:"searchMusic"
 			}
 		},
+		watch:{
+		},
+		computed:mapGetters({
+			theme:'theme'
+		}),
 		onLoad() {
 
 		},
+		mounted() {
+		},
 		methods: {
 			changeComponent(e) {
-				console.log(e)
 				this.componentName = e.componentName;
 			}
 		}

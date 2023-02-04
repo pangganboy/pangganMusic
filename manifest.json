@@ -7,6 +7,9 @@
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
+		"darkmode":true,
+		/* 如果 theme.json 在根目录可省略 */
+		"themeLocation" : "theme.json" ,
         "usingComponents" : true,
         "nvueStyleCompiler" : "uni-app",
         "compilerVersion" : 3,
